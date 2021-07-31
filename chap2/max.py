@@ -2,8 +2,8 @@
 
 from typing import Any, Sequence
 
-def max_of(a: Sequence) -> Any:
-    """시퀀스현 a 원소의 최대값을 반환"""
+def max_of(a: Sequence) -> Any: # 매개변수 a의 자료형은 Sequence, 반환하는 것은 임의의 자료형인 Any
+    """시퀀스형 a 원소의 최대값을 반환"""
     maximum = a[0]
     for i in range(1, len(a)):
         if a[i] > maximum:
