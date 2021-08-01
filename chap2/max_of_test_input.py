@@ -1,4 +1,5 @@
-##### max.py의 모듈 max로 정의된 max_of()함수 호출 #####
+##### max.py의 모듈 max로 정의된 max_of() 함수 호출 #####
+### 입력받을 때 원소 수를 결정하기
 #배열 원소의 최댓값을 구해서 출력하기(원솟값을 입력받음)
 
 from max import max_of
@@ -11,7 +12,7 @@ x = []  #빈 리스트
 
 while True:
   s = input(f'x[{number}]값을 입력하세요.: ')
-  if s = 'End':
+  if s == 'End':
     break
   x.append(int(s)) # 배열의 맨 끝에 추가
   number += 1
