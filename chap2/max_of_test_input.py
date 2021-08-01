@@ -1,3 +1,4 @@
+##### max.py의 모듈 max로 정의된 max_of()함수 호출 #####
 #배열 원소의 최댓값을 구해서 출력하기(원솟값을 입력받음)
 
 from max import max_of
