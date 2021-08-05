@@ -1,3 +1,4 @@
+## 배열 원소를 역순으로 정렬하기 
 #뮤터블 시퀀스 원소를 역순으로 정렬
 
 from typing import Any, MutableSequence
