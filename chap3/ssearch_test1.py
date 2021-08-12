@@ -13,13 +13,13 @@ while True:
     s = input(f'x[{number}]: ')
     if s == 'End':
         break
-    x.append(float(s))      # 배열 맨 끝에 원소를 추가
-    number += 1
+        x.append(float(s))      # 배열 맨 끝에 원소를 추가
+        number += 1
 
-ky = float(input('검색할 값을 입력하세요.: '))    # 검색할 키 ky를 입력받기
-idx = seq_search(x,ky)                           # ky와 같이 같은 원소를 x에서 검색
+        ky = float(input('검색할 값을 입력하세요.: '))    # 검색할 키 ky를 입력받기
+        idx = seq_search(x,ky)                           # ky와 같이 같은 원소를 x에서 검색
 
-if idx == -1:
-    print('검색값을 같는 원소가 존재하지 않습니다.')
-else:
-    print(f'검색값은 x[{idx}]에 있습니다.')
+        if idx == -1:
+            print('검색값을 같는 원소가 존재하지 않습니다.')
+        else:
+            print(f'검색값은 x[{idx}]에 있습니다.')
