@@ -26,7 +26,12 @@ class ChainedHash:
         """해시값을 구함"""
         if isinstance(key, int):                 ## isinstance() : 식별자가 특정 형의 데이터를 갖고 있는지 확인 -> key는 int형인가
             return key % self.capacity
+        ## key가 int형이 아닌 경우, 표준 라이브러리로 형 변환해야 해시값을 얻을 수 있음
         return (int(hashlib.sha256(str(key).encode()).hexdigest(), 16) % self.capacity)
+        # sha256 알고리즘: 주어진 바이트 문자열의 해시값을 구하는 해시 알고리즘의 생성자(construtor)
+        # encode() 함수: hashlib.sha256에는 바이트 문자열의 인수를 전달해야. 그래서 key를 str형 문자열로 변환한 뒤 그 문자열을 encode() 함수에 전달하여 바이트 문자열을 생성
+        # hexdigest() 함수: sha256 알고리즘에서 해시값을 16진수 문자열로 꺼냄.
+        # int() 함수: hexdigest() 함수로 꺼낸 문자열을 16진수 문자열로 하는 int형으로 변환
 
     def search(self, key: Any) -> Any:
         """키가 key인 원소를 검색하여 값을 반환"""
