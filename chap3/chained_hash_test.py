@@ -26,7 +26,7 @@ while True:
             print('추가를 실패했습니다.!')
 
     elif menu == Menu.삭제:      # 삭제
-        key = int(input('추가할 키를 입력하세요.: '))
+        key = int(input('삭제할 키를 입력하세요.: '))
         if not hash.remove(key):
             print('삭제를 실패했습니다.')
 
