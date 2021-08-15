@@ -24,7 +24,7 @@ class ChainedHash:
 
     def hash_value(self, key: Any) -> int:
         """해시값을 구함"""
-        if isinstance(key, int):
+        if isinstance(key, int):                 ## isinstance() : 식별자가 특정 형의 데이터를 갖고 있는지 확인 -> key는 int형인가
             return key % self.capacity
         return (int(hashlib.sha256(str(key).encode()).hexdigest(), 16) % self.capacity)
 
