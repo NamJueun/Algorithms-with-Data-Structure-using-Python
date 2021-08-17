@@ -45,6 +45,12 @@ class FixedStack:
         self.ptr -= 1
         return self.stk[self.ptr - 1]
 
+    def peek(self) -> Any:
+        """스택에서 데이터를 피크(꼭대기 데이터를 들여다봄)"""
+        if self.is_empty():                 # 스택이 비어 있음
+            raise self.stk[self.ptr - 1]    # 예외 처리 발생
+        return self.stk[self.ptr - 1]
+
     def clear(self) -> None:
         """스택을 비움(모든 데이터를 삭제)"""
         self.ptr = 0
@@ -74,4 +80,5 @@ class FixedStack:
             print('스택이 비어 있습니다.')
         else:
             print(self.stk[:self.ptr])
+
             
