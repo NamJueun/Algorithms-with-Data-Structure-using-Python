@@ -19,6 +19,10 @@ class FixedQueue:
         self.capacity = capacity        # 큐의 크기
         self.que = [None] * capacity    # 큐의 본체
 
+    def __len__(self) -> int:
+        """큐에 있는 모든 데이터 개수를 반환"""
+        return self.no
+
     def is_empty(self) -> bool:
         """큐가 비어 있는지 판단"""
         return self.no <= 0
